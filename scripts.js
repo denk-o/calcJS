@@ -8,6 +8,7 @@ $(document).ready(function(){
   $(".number").click(function(){
     if(isResult){
       $(".output").html($(this).children('.item').text());
+      isResult=false;
     }
     else{
       $(".output").append($(this).children('.item').text());
@@ -16,6 +17,7 @@ $(document).ready(function(){
   $(".operation").click(function(){
     if(isResult){
       $(".output").html($(this).children('.item').text());
+      isResult=false;
     }
     else{
       $(".output").append($(this).children('.item').text());
