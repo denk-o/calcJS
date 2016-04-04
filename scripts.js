@@ -1,30 +1,42 @@
+var isResult=false;
 function getOutput(){
   return $(".output").text();
 }
 
 
-
 $(document).ready(function(){
-  console.log("test0123456789");
   $(".number").click(function(){
-    $(".output").append($(this).children('.item').text());
+    if(isResult){
+      $(".output").html($(this).children('.item').text());
+    }
+    else{
+      $(".output").append($(this).children('.item').text());
+    }
   });
   $(".operation").click(function(){
+    if(isResult){
+      $(".output").html($(this).children('.item').text());
+    }
+    else{
       $(".output").append($(this).children('.item').text());
+    }
   });
   $(".equals").click(function(){
     var calculation = getOutput();
-    console.log(eval(calculation));
+    var res = eval(calculation);
+    if(typeof(res)=='number'){
+      $(".output").html(res);
+      isResult = true;
+    }
+    console.log(res);
   });
   $(".clear").click(function(){
     if($(this).children('.item').text()=="AC"){
       //clear memory
-      alert("ac");
       $(".output").html('');
     }
     if($(this).children('.item').text()=="CE"){
       //clear entry
-      alert("ce");
       $(".output").html('');
     }
   });
