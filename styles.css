@@ -1,0 +1,16 @@
+#calculator{
+  width: 300px;
+  border: 2px black solid;
+}
+.row{
+  padding-left: 15px;
+}
+.output{
+  height: 30px;
+  width: 275px;
+  padding: 5px;
+  border: 1px black solid;
+}
+.button{
+  padding: 3px;
+}
