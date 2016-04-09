@@ -1,6 +1,8 @@
 #calculator{
   width: 300px;
   border: 2px black solid;
+  vertical-align:middle;
+  margin: 20%;
 }
 .row{
   padding-left: 15px;
@@ -10,7 +12,11 @@
   width: 275px;
   padding: 5px;
   border: 1px black solid;
+  margin: 8px;
 }
 .button{
   padding: 3px;
+}
+.buttons{
+  margin-left: 5px;
 }
